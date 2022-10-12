@@ -6,11 +6,9 @@ function isAFactor(x,y){
     }
 }
 function allFactors(y, array){
-  //document.write("factors: ");
   for (let i = 0; i < y; i++){
     if (isAFactor(i,y)){
       array.push(i);
-      //document.write(i + " ");
     }
   }
 }
@@ -31,13 +29,11 @@ function isAmicable(array1, array2, num1, num2){
 }
 const factors1 = [];
 const factors2 = [];
-// number1 = prompt("First number:")
-// number2 = prompt("Second number:")
-number1 = 284
-number2 = 220
+number1 = prompt("First number:")
+number2 = prompt("Second number:")
 allFactors(number1,factors1)
 allFactors(number2, factors2)
-//document.write("sums: " + sumFactors(factors1) + "  " + sumFactors(factors2))
+
 if(isAmicable(factors1, factors2, number1, number2) == true){
   document.getElementById("amicable").innerHTML = "The numbers: " + number1 + " and " + number2 + " are amicable."
 } else {
